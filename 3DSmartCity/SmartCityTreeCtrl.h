@@ -6,6 +6,7 @@
 #include <Windows.h>
 using namespace std;
 
+
 // SmartCityTreeCtrl
 
 class SmartCityTreeCtrl : public CTreeCtrl

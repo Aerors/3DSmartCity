@@ -71,16 +71,46 @@ void SmartCityTreeCtrl::OnNMClick(NMHDR *pNMHDR, LRESULT *pResult)
 			if(0 ==s.compare(layerName001))
 			{
 				layer = *it;
+				if(checked)
+				{//此时由选中到未选中
+					//map->removeImageLayer(layer);
+					//------wangsongwei 更改为不可见
+					layer->setVisible(false);
+				}else
+				{//此时由未选中到选中
+					//map->addImageLayer(layer);
+					//------wangsongwei
+					layer->setVisible(true);
+				}
+				//theApp.NeedModify = FALSE;
 			}
 		}
-		if(checked)
-		{//此时由选中到未选中
-			map->removeImageLayer(layer);
-		}else
-		{//此时由未选中到选中
-			map->addImageLayer(layer);
+
+		
+
+		//-----wangsongwei  模型层
+		osg::ref_ptr<osgEarth::ModelLayer> mlayer;
+		for(osgEarth::ModelLayerVector::iterator it = pRightView->mOSG->modelLayerVec.begin();it!=pRightView->mOSG->modelLayerVec.end();it++)
+		{
+			string s = (*it)->getName();
+			if(0 ==s.compare(layerName001))
+			{
+				mlayer = *it;
+				if(checked)
+				{//此时由选中到未选中
+					//map->removeImageLayer(layer);
+					//------wangsongwei 更改为不可见
+					mlayer->setVisible(false);
+				}else
+				{//此时由未选中到选中
+					//map->addImageLayer(layer);
+					//------wangsongwei
+					mlayer->setVisible(true);
+				}
+				//theApp.NeedModify = FALSE;
+			}
 		}
-		//theApp.NeedModify = FALSE;
+		
 	}
 	*pResult = 0;
 }

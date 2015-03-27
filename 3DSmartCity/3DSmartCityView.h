@@ -36,6 +36,10 @@ public:
 public:
 	COSGObject* mOSG;
 	HANDLE mThreadHandle;
+//wangsongwei  场景控制标识符
+public:
+	bool isPipe;
+	bool isFirst;
 
 // 重写
 public:
@@ -71,6 +75,8 @@ public:
 	virtual void OnInitialUpdate();
 	afx_msg void OnDestroy();
 	afx_msg void OnGuanxiantongjion();
+	afx_msg void OnPipeview();
+	afx_msg void OnBuildingview();
 };
 
 #ifndef _DEBUG  // 3DSmartCityView.cpp 中的调试版本

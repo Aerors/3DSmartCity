@@ -35,6 +35,9 @@ public:
 	virtual BOOL InitInstance();
 	virtual int ExitInstance();
 
+	BOOL NeedModify;
+	BOOL CanModify;
+
 // й╣ож
 	UINT  m_nAppLook;
 	virtual void PreLoadState();

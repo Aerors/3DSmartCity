@@ -8,9 +8,12 @@
 #include <osgEarthUtil/EarthManipulator>
 #include <osgEarthUtil/Sky>
 #include <osgEarth/ImageLayer>
+#include "3DSmartCity.h"
 using namespace std;
 
 #include "StatisticDialog.h"
+
+using namespace osgEarth;
 class COSGObject
 {
 public:
@@ -33,6 +36,7 @@ public:
 	void rmvChinaBounds();
 	void addChinaBounds();
 
+
 //dc--管线统计--------------------------------------------------------------------------
 public:
 	bool ifDoStatistic;
@@ -41,6 +45,10 @@ public:
 	osg::Group* pRectNodeGroup;
 //dc----------------------------------------------------------------------------
 
+	//------wangsongwei  加上模型层控制
+	ModelLayerVector modelLayerVec;
+
+
 private:
 	HWND n_hWnd;//创建一个句柄
 	osgViewer::Viewer * mViewer;
@@ -48,6 +56,12 @@ private:
 
 	osg::ref_ptr<osgEarth::Util::EarthManipulator> em;
 	osg::ref_ptr<osgEarth::ImageLayer> china_boundaries;
+	//管线 管点
+private:
+	map<string ,string> *pipes;
+public:
+	void pipeView(void);
+	void buildingView(void);
 
 };
 

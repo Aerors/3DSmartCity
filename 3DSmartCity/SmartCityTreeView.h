@@ -3,6 +3,7 @@
 #include "OSGObject.h"
 
 using namespace std;
+using namespace osgEarth;
 
 
 // SmartCityTreeView йсм╪

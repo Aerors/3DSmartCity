@@ -5,6 +5,8 @@
 COSGObject::COSGObject(HWND hWnd)
 {
 	n_hWnd = hWnd;
+	pipes=new map<string ,string>;
+	pipes->insert(pair<string,string>("ysgline_new","ysgpoint_new"));
 }
 
 
@@ -29,6 +31,11 @@ void COSGObject::InitSceneGraph()
 	//获取图层
 	mapNode->getMap()->getImageLayers(imageLayerVec);
 	for (osgEarth::ImageLayerVector::iterator it=imageLayerVec.begin();it!=imageLayerVec.end();it++)
+	{
+		layernames.push_back(it->get()->getName());
+	}
+	mapNode->getMap()->getModelLayers(modelLayerVec);
+	for (ModelLayerVector::iterator it=modelLayerVec.begin();it!=modelLayerVec.end();it++)
 	{
 		layernames.push_back(it->get()->getName());
 	}
@@ -67,13 +74,14 @@ void COSGObject::InitCameraConfig()//初始化相机
 	mViewer->getCamera()->setNearFarRatio(0.000003f);
 
 }
-void COSGObject::PreFrameUpdate()//前处理
+void COSGObject::PreFrameUpdate()
 {
-
+	while(theApp.NeedModify) Sleep(1);
+	theApp.CanModify=FALSE;
 }
-void COSGObject::PostFrameUpdate()//后处理
+void COSGObject::PostFrameUpdate()
 {
-
+	if (theApp.NeedModify)theApp.CanModify=true;
 }
 void COSGObject::Render(void * ptr)//规避线程互斥方法,渲染线程
 {
@@ -155,4 +163,50 @@ void COSGObject::addChinaBounds()
 	}
 }
 
+void COSGObject::pipeView(void)
+{
 
+	for (ImageLayerVector::iterator it=imageLayerVec.begin();it!=imageLayerVec.end();it++)
+	{
+		//mapNode->getMap()->removeImageLayer(it->get());
+		it->get()->setVisible(false);
+	}
+
+	for (ModelLayerVector::iterator it=modelLayerVec.begin();it!=modelLayerVec.end();it++)
+	{
+		//mapNode->getMap()->removeModelLayer(it->get());
+		if (pipes->find(it->get()->getName())==pipes->end())
+		{
+			it->get()->setVisible(false);
+		}
+		else
+		{
+			it->get()->setVisible(true);
+		}
+	}
+}
+
+
+
+void COSGObject::buildingView(void)
+{
+	for (ImageLayerVector::iterator it=imageLayerVec.begin();it!=imageLayerVec.end();it++)
+	{
+		//mapNode->getMap()->addImageLayer(it->get());
+		it->get()->setVisible(true);
+	}
+
+	for (ModelLayerVector::iterator it=modelLayerVec.begin();it!=modelLayerVec.end();it++)
+	{
+		//mapNode->getMap()->addModelLayer(it->get());
+		//it->get()->setVisible(true);
+		if (pipes->find(it->get()->getName())==pipes->end())
+		{
+			it->get()->setVisible(true);
+		}
+		else
+		{
+			it->get()->setVisible(false);
+		}
+	}
+}

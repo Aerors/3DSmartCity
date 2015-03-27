@@ -8,7 +8,9 @@
 #include <osgEarthUtil/EarthManipulator>
 #include <osgEarthUtil/Sky>
 #include <osgEarth/ImageLayer>
+#include "3DSmartCity.h"
 using namespace std;
+using namespace osgEarth;
 class COSGObject
 {
 public:
@@ -31,6 +33,9 @@ public:
 	void rmvChinaBounds();
 	void addChinaBounds();
 
+	//------wangsongwei  加上模型层控制
+	ModelLayerVector modelLayerVec;
+
 private:
 	HWND n_hWnd;//创建一个句柄
 	osgViewer::Viewer * mViewer;
@@ -38,6 +43,12 @@ private:
 
 	osg::ref_ptr<osgEarth::Util::EarthManipulator> em;
 	osg::ref_ptr<osgEarth::ImageLayer> china_boundaries;
+	//管线 管点
+private:
+	map<string ,string> *pipes;
+public:
+	void pipeView(void);
+	void buildingView(void);
 
 };
 

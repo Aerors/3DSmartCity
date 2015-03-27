@@ -43,8 +43,10 @@ BEGIN_MESSAGE_MAP(CMy3DSmartCityView, CView)
 	ON_WM_ERASEBKGND()
 	ON_WM_DESTROY()
 	ON_COMMAND(ID_GUANXIANTONGJION, &CMy3DSmartCityView::OnGuanxiantongjion)
-	ON_COMMAND(ID_PIPEVIEW, &CMy3DSmartCityView::OnPipeview)
-	ON_COMMAND(ID_BUILDINGVIEW, &CMy3DSmartCityView::OnBuildingview)
+	/*ON_COMMAND(ID_PIPEVIEW, &CMy3DSmartCityView::OnPipeview)
+	ON_COMMAND(ID_BUILDINGVIEW, &CMy3DSmartCityView::OnBuildingview)*/
+	ON_COMMAND(ID_CHANGJINGON, &CMy3DSmartCityView::OnPipeOn)
+	ON_COMMAND(32791, &CMy3DSmartCityView::OnBuildingOn)
 END_MESSAGE_MAP()
 
 // CMy3DSmartCityView 构造/析构
@@ -220,8 +222,39 @@ void CMy3DSmartCityView::OnGuanxiantongjion()
 {
 	// TODO: 在此添加命令处理程序代码
 	mOSG->initStatisticDlg();
+}
 //地下管线  场景------wangsongwei
-void CMy3DSmartCityView::OnPipeview()
+//void CMy3DSmartCityView::OnPipeview()
+//{
+//	// TODO: 在此添加命令处理程序代码
+//	theApp.NeedModify=TRUE;
+//	while(!theApp.CanModify)Sleep(1);
+//	if (isFirst||!isPipe)
+//	{
+//		mOSG->pipeView();
+//		isPipe=true;
+//		isFirst=false;
+//	}
+//	theApp.NeedModify=FALSE;
+//}
+//
+////地上建筑  场景------wangsongwei
+//void CMy3DSmartCityView::OnBuildingview()
+//{
+//	// TODO: 在此添加命令处理程序代码
+//	theApp.NeedModify=TRUE;
+//	while(!theApp.CanModify)Sleep(1);
+//	if (isFirst||isPipe)
+//	{
+//		mOSG->buildingView();
+//		isPipe=false;
+//		isFirst=false;
+//	}
+//	theApp.NeedModify=FALSE;
+//}
+
+
+void CMy3DSmartCityView::OnPipeOn()
 {
 	// TODO: 在此添加命令处理程序代码
 	theApp.NeedModify=TRUE;
@@ -235,8 +268,8 @@ void CMy3DSmartCityView::OnPipeview()
 	theApp.NeedModify=FALSE;
 }
 
-//地上建筑  场景------wangsongwei
-void CMy3DSmartCityView::OnBuildingview()
+
+void CMy3DSmartCityView::OnBuildingOn()
 {
 	// TODO: 在此添加命令处理程序代码
 	theApp.NeedModify=TRUE;

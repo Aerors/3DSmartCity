@@ -75,8 +75,10 @@ public:
 	virtual void OnInitialUpdate();
 	afx_msg void OnDestroy();
 	afx_msg void OnGuanxiantongjion();
-	afx_msg void OnPipeview();
-	afx_msg void OnBuildingview();
+	//afx_msg void OnPipeview();
+	//afx_msg void OnBuildingview();
+	afx_msg void OnPipeOn();
+	afx_msg void OnBuildingOn();
 };
 
 #ifndef _DEBUG  // 3DSmartCityView.cpp 中的调试版本

@@ -1,15 +1,23 @@
-﻿生成启动时间为 2015/3/27 10:09:15。
-     1>项目“E:\github\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2015/3/27 12:53:24。
+     1>项目“C:\Users\Administrator\Documents\GitHub\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在对“x64\Debug\3DSmartCity.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         所有输出均为最新。
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"x64\Debug\3DSmartCity.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt SmartCityTreeCtrl.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"x64\Debug\3DSmartCity.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"x64\Debug\3DSmartCity.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt 3DSmartCity.cpp 3DSmartCityDoc.cpp 3DSmartCityView.cpp MainFrm.cpp OSGObject.cpp SmartCityTreeCtrl.cpp SmartCityTreeView.cpp
+         SmartCityTreeView.cpp
          SmartCityTreeCtrl.cpp
+         OSGObject.cpp
+         MainFrm.cpp
+         3DSmartCityView.cpp
+         3DSmartCityDoc.cpp
+         3DSmartCity.cpp
+         Generating Code...
        ResourceCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _AFXDLL /l"0x0804" /Ix64\Debug\ /nologo /fo"x64\Debug\3DSmartCity.res" 3DSmartCity.rc 
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\github\3DSmartCity\x64\Debug\3DSmartCity.exe" /INCREMENTAL /NOLOGO osgModelingd.lib osgd.lib osgUtild.lib osgViewerd.lib osgDBd.lib OpenThreadsd.lib osgGAd.lib osgEarthd.lib osgEarthUtild.lib osgEarthAnnotationd.lib osgEarthFeaturesd.lib osgEarthSymbologyd.lib /MANIFEST /ManifestFile:"x64\Debug\3DSmartCity.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\github\3DSmartCity\x64\Debug\3DSmartCity.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\github\3DSmartCity\x64\Debug\3DSmartCity.lib" /MACHINE:X64 x64\Debug\3DSmartCity.res
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Debug\3DSmartCity.exe" /INCREMENTAL /NOLOGO osgModelingd.lib osgd.lib osgUtild.lib osgViewerd.lib osgDBd.lib OpenThreadsd.lib osgGAd.lib osgEarthd.lib osgEarthUtild.lib osgEarthAnnotationd.lib osgEarthFeaturesd.lib osgEarthSymbologyd.lib /MANIFEST /ManifestFile:"x64\Debug\3DSmartCity.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Debug\3DSmartCity.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Debug\3DSmartCity.lib" /MACHINE:X64 x64\Debug\3DSmartCity.res
          x64\Debug\3DSmartCity.obj
          x64\Debug\3DSmartCityDoc.obj
          x64\Debug\3DSmartCityView.obj
@@ -18,14 +26,11 @@
          x64\Debug\SmartCityTreeCtrl.obj
          x64\Debug\SmartCityTreeView.obj
          x64\Debug\stdafx.obj
-         3DSmartCity.vcxproj -> E:\github\3DSmartCity\x64\Debug\3DSmartCity.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"E:\github\3DSmartCity\x64\Debug\3DSmartCity.exe.manifest" /manifest x64\Debug\3DSmartCity.exe.intermediate.manifest "D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
-       FinalizeBuildStatus:
-         正在删除文件“x64\Debug\3DSmartCity.unsuccessfulbuild”。
-         正在对“x64\Debug\3DSmartCity.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\github\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”(build 个目标)的操作。
+     1>OSGObject.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl StatisticDialog::StatisticDialog(class CWnd *)" (??0StatisticDialog@@QEAA@PEAVCWnd@@@Z)，该符号在函数 "public: __cdecl COSGObject::COSGObject(struct HWND__ *)" (??0COSGObject@@QEAA@PEAUHWND__@@@Z) 中被引用
+     1>OSGObject.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl PipeStatisticHandler::PipeStatisticHandler(class osgViewer::Viewer *,class osgEarth::MapNode *,class StatisticDialog * *,class osg::Group * *)" (??0PipeStatisticHandler@@QEAA@PEAVViewer@osgViewer@@PEAVMapNode@osgEarth@@PEAPEAVStatisticDialog@@PEAPEAVGroup@osg@@@Z)，该符号在函数 "public: void __cdecl COSGObject::InitCameraConfig(void)" (?InitCameraConfig@COSGObject@@QEAAXXZ) 中被引用
+     1>C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Debug\3DSmartCity.exe : fatal error LNK1120: 2 个无法解析的外部命令
+     1>已完成生成项目“C:\Users\Administrator\Documents\GitHub\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”(build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:06.97
+已用时间 00:00:39.19

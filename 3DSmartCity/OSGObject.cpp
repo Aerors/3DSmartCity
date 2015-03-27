@@ -1,7 +1,6 @@
 #include "StdAfx.h"
 #include "OSGObject.h"
 
-#include "PipeStatisticHandler.h"
 
 COSGObject::COSGObject(HWND hWnd)
 {
@@ -177,6 +176,7 @@ void COSGObject::addChinaBounds()
 void COSGObject::initStatisticDlg()
 {
 	pStatisticDlg->ShowWindow(SW_NORMAL);
+}
 void COSGObject::pipeView(void)
 {
 

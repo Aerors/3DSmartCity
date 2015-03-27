@@ -11,7 +11,8 @@
 #include "3DSmartCity.h"
 using namespace std;
 
-#include "StatisticDialog.h"
+#include "PipeStatisticHandler.h"
+
 
 using namespace osgEarth;
 class COSGObject

@@ -1,32 +1,44 @@
-﻿生成启动时间为 2015/3/26 14:24:11。
-     1>项目“C:\Users\Aerors\Documents\Visual Studio 2010\Projects\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2015/3/27 14:06:53。
+     1>项目“C:\Users\Administrator\Documents\GitHub\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
-         正在对“x64\Release\3DSmartCity.unsuccessfulbuild”执行 Touch 任务。
+         正在创建“x64\Release\3DSmartCity.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         E:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"x64\Release\3DSmartCity.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt 3DSmartCityView.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"x64\Release\3DSmartCity.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt 3DSmartCity.cpp 3DSmartCityDoc.cpp 3DSmartCityView.cpp MainFrm.cpp OSGObject.cpp PipeStatisticHandler.cpp SmartCityTreeCtrl.cpp SmartCityTreeView.cpp StatisticDialog.cpp
+         3DSmartCity.cpp
+         3DSmartCityDoc.cpp
          3DSmartCityView.cpp
+         MainFrm.cpp
+         OSGObject.cpp
+         PipeStatisticHandler.cpp
+         SmartCityTreeCtrl.cpp
+         SmartCityTreeView.cpp
+         StatisticDialog.cpp
+     1>StatisticDialog.cpp(64): warning C4244: “参数”: 从“WPARAM”转换到“BOOL”，可能丢失数据
        ResourceCompile:
-         所有输出均为最新。
-         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _AFXDLL /l"0x0804" /Ix64\Release\ /nologo /fo"x64\Release\3DSmartCity.res" 3DSmartCity.rc 
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _AFXDLL /l"0x0804" /Ix64\Release\ /nologo /fo"x64\Release\3DSmartCity.res" 3DSmartCity.rc 
        Link:
-         E:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Aerors\Documents\Visual Studio 2010\Projects\3DSmartCity\x64\Release\3DSmartCity.exe" /INCREMENTAL:NO /NOLOGO osgModeling.lib osg.lib osgUtil.lib osgViewer.lib osgDB.lib OpenThreads.lib osgGA.lib osgEarth.lib osgEarthUtil.lib osgEarthAnnotation.lib osgEarthFeatures.lib osgEarthSymbology.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\Aerors\Documents\Visual Studio 2010\Projects\3DSmartCity\x64\Release\3DSmartCity.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Aerors\Documents\Visual Studio 2010\Projects\3DSmartCity\x64\Release\3DSmartCity.lib" /MACHINE:X64 x64\Release\3DSmartCity.res
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Release\3DSmartCity.exe" /INCREMENTAL:NO /NOLOGO libpq.lib osgModeling.lib osg.lib osgUtil.lib osgViewer.lib osgDB.lib OpenThreads.lib osgGA.lib osgEarth.lib osgEarthUtil.lib osgEarthAnnotation.lib osgEarthFeatures.lib osgEarthSymbology.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Release\3DSmartCity.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Release\3DSmartCity.lib" /MACHINE:X64 x64\Release\3DSmartCity.res
          x64\Release\3DSmartCity.obj
          x64\Release\3DSmartCityDoc.obj
          x64\Release\3DSmartCityView.obj
+         x64\Release\DBConnection.obj
          x64\Release\MainFrm.obj
+         x64\Release\makeSql.obj
          x64\Release\OSGObject.obj
+         x64\Release\PipeStatisticHandler.obj
          x64\Release\SmartCityTreeCtrl.obj
          x64\Release\SmartCityTreeView.obj
+         x64\Release\StatisticDialog.obj
          x64\Release\stdafx.obj
          正在生成代码
          已完成代码的生成
-         3DSmartCity.vcxproj -> C:\Users\Aerors\Documents\Visual Studio 2010\Projects\3DSmartCity\x64\Release\3DSmartCity.exe
+         3DSmartCity.vcxproj -> C:\Users\Administrator\Documents\GitHub\3DSmartCity\x64\Release\3DSmartCity.exe
        FinalizeBuildStatus:
          正在删除文件“x64\Release\3DSmartCity.unsuccessfulbuild”。
          正在对“x64\Release\3DSmartCity.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“C:\Users\Aerors\Documents\Visual Studio 2010\Projects\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“C:\Users\Administrator\Documents\GitHub\3DSmartCity\3DSmartCity\3DSmartCity.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:59.56
+已用时间 00:01:13.12

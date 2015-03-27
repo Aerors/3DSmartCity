@@ -70,6 +70,7 @@ public:
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 	virtual void OnInitialUpdate();
 	afx_msg void OnDestroy();
+	afx_msg void OnGuanxiantongjion();
 };
 
 #ifndef _DEBUG  // 3DSmartCityView.cpp 中的调试版本

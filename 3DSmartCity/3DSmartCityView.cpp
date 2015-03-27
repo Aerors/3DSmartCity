@@ -42,6 +42,7 @@ BEGIN_MESSAGE_MAP(CMy3DSmartCityView, CView)
 	ON_WM_CREATE()
 	ON_WM_ERASEBKGND()
 	ON_WM_DESTROY()
+	ON_COMMAND(ID_GUANXIANTONGJION, &CMy3DSmartCityView::OnGuanxiantongjion)
 END_MESSAGE_MAP()
 
 // CMy3DSmartCityView 构造/析构
@@ -208,4 +209,11 @@ void CMy3DSmartCityView::OnDestroy()
 	WaitForSingleObject(mThreadHandle,1000);
 
 	// TODO: 在此处添加消息处理程序代码
+}
+
+
+void CMy3DSmartCityView::OnGuanxiantongjion()
+{
+	// TODO: 在此添加命令处理程序代码
+	mOSG->initStatisticDlg();
 }

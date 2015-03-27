@@ -1,10 +1,13 @@
 #include "StdAfx.h"
 #include "OSGObject.h"
 
+#include "PipeStatisticHandler.h"
 
 COSGObject::COSGObject(HWND hWnd)
 {
 	n_hWnd = hWnd;
+
+	pStatisticDlg =  new StatisticDialog();
 }
 
 
@@ -58,6 +61,13 @@ void COSGObject::InitCameraConfig()//初始化相机
 	camera->setGraphicsContext(gc);
 	camera->setViewport(new osg::Viewport(traits->x,traits->y,traits->width,traits->height));
 	camera->setProjectionMatrixAsPerspective(30.0f,static_cast<double> (traits->width)/static_cast<double>(traits->height),1.0,1000.0);
+
+	//dc begin	管线统计---------------------------------------
+	pStatisticDlg->Create(IDD_TONGJI);
+	pRectNodeGroup = new osg::Group;
+	mRoot->addChild(pRectNodeGroup);
+	mViewer->addEventHandler(new PipeStatisticHandler(mViewer,mapNode.get(),&pStatisticDlg,&pRectNodeGroup));
+	//dc end	管线统计---------------------------------------
 
 	mViewer->setCamera(camera);
 	//mViewer->setCameraManipulator(new osgGA::TrackballManipulator);
@@ -155,4 +165,7 @@ void COSGObject::addChinaBounds()
 	}
 }
 
-
+void COSGObject::initStatisticDlg()
+{
+	pStatisticDlg->ShowWindow(SW_NORMAL);
+}

@@ -9,6 +9,8 @@
 #include <osgEarthUtil/Sky>
 #include <osgEarth/ImageLayer>
 using namespace std;
+
+#include "StatisticDialog.h"
 class COSGObject
 {
 public:
@@ -30,6 +32,14 @@ public:
 	double getChinaBoundariesOpacity();
 	void rmvChinaBounds();
 	void addChinaBounds();
+
+//dc--管线统计--------------------------------------------------------------------------
+public:
+	bool ifDoStatistic;
+	StatisticDialog* pStatisticDlg;
+	void initStatisticDlg();
+	osg::Group* pRectNodeGroup;
+//dc----------------------------------------------------------------------------
 
 private:
 	HWND n_hWnd;//创建一个句柄

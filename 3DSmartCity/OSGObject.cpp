@@ -4,7 +4,7 @@
 
 COSGObject::COSGObject(HWND hWnd)
 {
-	n_hWnd = hWnd;
+	n_hWnd = hWnd;           /////æˆ‘éƒ½é†‰äº†, ç£Šå“¥, ä¸ºä»€ä¹ˆå˜æˆn_hWndäº†!!!!!!!!!!!!!!!!
 
 	pStatisticDlg =  new StatisticDialog();
 	pipes=new map<string ,string>;
@@ -25,12 +25,12 @@ void COSGObject::InitOSG()
 }
 void COSGObject::InitSceneGraph()
 {
-	//³õÊ¼»¯³¡¾°Í¼
+	//åˆå§‹åŒ–åœºæ™¯å›¾
 	mRoot=new osg::Group;
 	osg::ref_ptr<osg::Node> mp=osgDB::readNodeFile("E:/HRB/china-simple2.earth");
 	mRoot->addChild(mp);
 	mapNode=dynamic_cast<osgEarth::MapNode*>(mp.get());
-	//»ñÈ¡Í¼²ã
+	//è·å–å›¾å±‚
 	mapNode->getMap()->getImageLayers(imageLayerVec);
 	for (osgEarth::ImageLayerVector::iterator it=imageLayerVec.begin();it!=imageLayerVec.end();it++)
 	{
@@ -42,7 +42,7 @@ void COSGObject::InitSceneGraph()
 		layernames.push_back(it->get()->getName());
 	}
 }
-void COSGObject::InitCameraConfig()//³õÊ¼»¯Ïà»ú
+void COSGObject::InitCameraConfig()//åˆå§‹åŒ–ç›¸æœº
 {
 	CRect rect;
 	//RECT rect;	
@@ -68,12 +68,12 @@ void COSGObject::InitCameraConfig()//³õÊ¼»¯Ïà»ú
 	camera->setViewport(new osg::Viewport(traits->x,traits->y,traits->width,traits->height));
 	camera->setProjectionMatrixAsPerspective(30.0f,static_cast<double> (traits->width)/static_cast<double>(traits->height),1.0,1000.0);
 
-	//dc begin	¹ÜÏßÍ³¼Æ---------------------------------------
+	//dc begin	ç®¡çº¿ç»Ÿè®¡---------------------------------------
 	pStatisticDlg->Create(IDD_TONGJI);
 	pRectNodeGroup = new osg::Group;
 	mRoot->addChild(pRectNodeGroup);
 	mViewer->addEventHandler(new PipeStatisticHandler(mViewer,mapNode.get(),&pStatisticDlg,&pRectNodeGroup));
-	//dc end	¹ÜÏßÍ³¼Æ---------------------------------------
+	//dc end	ç®¡çº¿ç»Ÿè®¡---------------------------------------
 
 	mViewer->setCamera(camera);
 	//mViewer->setCameraManipulator(new osgGA::TrackballManipulator);
@@ -92,7 +92,7 @@ void COSGObject::PostFrameUpdate()
 {
 	if (theApp.NeedModify)theApp.CanModify=true;
 }
-void COSGObject::Render(void * ptr)//¹æ±ÜÏß³Ì»¥³â·½·¨,äÖÈ¾Ïß³Ì
+void COSGObject::Render(void * ptr)//è§„é¿çº¿ç¨‹äº’æ–¥æ–¹æ³•,æ¸²æŸ“çº¿ç¨‹
 {
 
 	COSGObject *osg =(COSGObject *)ptr;
@@ -114,7 +114,7 @@ osgViewer::Viewer *COSGObject::getViewer()
 
 void COSGObject::InitOsgEarth()
 {
-	//³õÊ¼»¯²Ù×÷Æ÷
+	//åˆå§‹åŒ–æ“ä½œå™¨
 	em=new osgEarth::Util::EarthManipulator;
 
 	if(mapNode.valid())
@@ -124,7 +124,7 @@ void COSGObject::InitOsgEarth()
 	em->getSettings()->setArcViewpointTransitions(true);
 	mViewer->setCameraManipulator(em);
 
-	//³õÊ¼»¯Ìì¿Õ
+	//åˆå§‹åŒ–å¤©ç©º
 	osgEarth::Config skyConf;
 	osgEarth::Util::SkyOptions options(skyConf);
 	double hours=skyConf.value("hours",12.0);
@@ -132,7 +132,7 @@ void COSGObject::InitOsgEarth()
 	skyNode->setDateTime(osgEarth::DateTime(2015,02,13,hours));
 	skyNode->attach(mViewer,3);
 	mRoot->addChild(skyNode);
-	//»ñÈ¡Í¼²ã
+	//è·å–å›¾å±‚
 
 	china_boundaries=mapNode->getMap()->getImageLayerByName("world_boundaries");
 
